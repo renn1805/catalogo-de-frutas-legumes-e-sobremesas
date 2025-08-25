@@ -1,0 +1,122 @@
+body {
+    background: #faf8ef;
+}
+
+main.conteiner {
+    display: flex;
+    flex-direction: column;
+}
+h1.title{
+    margin-inline: auto ;
+    background: linear-gradient(to right, var(--color-card1),var(--color-card2),var(--color-card3));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+p.description{
+    width: 70%;
+    margin-inline: auto;
+    text-align: center;
+    margin-block: 20px 45px;
+    font-weight: 300;
+}
+section.conteinerCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+section.conteinerCards div.card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background: #fff;
+    border-radius: 10px;
+    transition: all .7s ease-in-out;
+}
+section.conteinerCards div.card1:hover{
+    transform: translateY(-10px);
+    box-shadow: -18px 10px 11px 0px rgba(247,144,61,0.27);
+}
+section.conteinerCards div.card2:hover{
+    transform: translateY(-10px);
+    box-shadow: -18px 10px 11px 0px rgba(227,112,183,0.27);
+}
+section.conteinerCards div.card3:hover{
+    transform: translateY(-10px);
+    box-shadow: -18px 10px 11px 0px rgba(53,203,125,0.27);
+}
+
+section.conteinerCards div.conteinerImg {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 200px;
+    transition: 1s;
+    overflow: hidden;
+}
+
+img.imgCard {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .7s ease-in-out;
+}
+
+div.card:hover img.imgCard {
+    transform: scale(1.1);
+    filter: blur(1px);
+}
+
+section.conteinerCards div.conteinerTextoCard {
+    margin: 30px;
+    text-align: center;
+}
+
+div.card1 h2.titleCard {
+    color: var(--color-card1);
+}
+
+div.card2 h2.titleCard {
+    color: var(--color-card2);
+}
+
+div.card3 h2.titleCard {
+    color: var(--color-card3);
+}
+
+div.conteinerTextoCard p.descripitionCard {
+    font-weight: 200;
+    margin-block: 20px;
+}
+
+div.card1 div.buttonCard {
+    background: var(--color-card1);
+}
+
+div.card2 div.buttonCard {
+    background: var(--color-card2);
+}
+
+div.card3 div.buttonCard {
+    background: var(--color-card3);
+}
+a.link{
+    text-decoration: none;
+}
+div.buttonCard {
+    margin-inline: auto;
+    color: white;
+    transition: all .5s ease-in-out;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    width: 70%;
+    cursor: pointer;
+}
+
+div.buttonCard:hover {
+    opacity: 70%;
+}
