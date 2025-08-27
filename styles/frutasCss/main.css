@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 body {
     background: #faf8ef;
     padding-inline: 50px;
@@ -6,10 +7,15 @@ body {
 
 /*?  seletor di tutulo da pagina*/
 h1.title {
-    color: rgb(0, 0, 0);
+    color: rgb(68, 68, 68);
     text-align: center;
-    font-weight: 400;
-    margin-block: 10px 40px;
+    margin-block: 20px 40px;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+
+
 }
 
 /*? selecionar o conteiner do card em si */
@@ -47,10 +53,6 @@ div.backSide {
     border-radius: 10px;
     position: absolute;
     backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
 
 /* ? define um fundo, e algumas outras coisas para a frente */
@@ -61,21 +63,84 @@ div.frontSide {
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: backgroundAnimation 3s infinite ease-in-out;
+    transition: all 1s ease-in-out;
+}
 
+div.frontSide:hover {
+    transform: translateY(-10px);
+    box-shadow: -18px 10px 11px 0px rgba(0, 0, 0, 0.27);
+}
+
+div.conteinerConteudoFrontSide {
+    position: absolute;
+}
+
+div.frontSide h2 {
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}
+
+div.frontSide:hover h2 {
+    opacity: 100%;
 }
 
 /* ? define as configurações do verso */
 div.backSide {
-    background: #ccc;
+    background: #fff;
     transform: rotateY(180deg);
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-
+    flex-direction: column;
+    padding: 20px;
 }
 
+/* ? faz tudo que esta no lado de tras rodar junto com o card para não ficar invertido */
 div.backSide * {
     transform: rotateY(180deg);
+}
+
+div.backSide img.icone {
+    width: 60px;
+    margin-inline: auto;
+}
+
+div.backSide h2.titleBackSide {
+    margin-inline: auto;
+}
+
+/* ! parte da lista */
+div.conteinerConteudoBackside ul.listaVantagens {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+ul.listaVantagens li.topicos {
+    background: rgba(247, 183, 63, 0.872);
+    color: white;
+    font-weight: 700;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+/* ! parte de animação */
+@keyframes backgroundAnimation {
+    0% {
+        background-position: left;
+    }
+
+    50% {
+        background-position: right;
+    }
+
+    100% {
+        background-position: left;
+    }
 }
