@@ -1,3 +1,3 @@
 # site-sobre-frutas
 
-<img src="public\preview.png">
+<center><img height="80%" src="public\preview.png"></center>
