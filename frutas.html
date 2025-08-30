@@ -6,39 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>frutas</title>
 
+    <!--? links globais -->
     <link rel="stylesheet" href="styles/resets.css">
     <link rel="stylesheet" href="styles/botaoVoltar.css">
     <link rel="stylesheet" href="styles/TituloPages.css">
 
+    <!-- ? links dessa própria pagina -->
     <link rel="stylesheet" href="styles/frutasCss/main.css">
     <link rel="stylesheet" href="styles/frutasCss/atribuições.css">
 
 </head>
 
 <body>
+    <!-- ? botão de voltar para home -->
     <button class="botaoVoltar">
         <a href="index.html" class="linkVoltar">
             <img src="public/icones/iconeVoltar.png" class="iconeVoltar">
             <span>Voltar</span>
         </a>
     </button>
+
+    <!-- ? o conteiner pricipal e nesse caso o unico -->
     <main class="conteiner">
+        <!-- ? um titulo e uma descrição para a pagina-->
         <h1 class="title">CONHEÇA MAIS SOBRE AS FRUTAS</h1>
         <span class="descricao">
             Descubra os benefícios e cuidados necessários ao consumir estas frutas saborosas e nutritivas.
         </span>
 
+        <!-- ?  uma section para conter os cards-->
+         <!-- ! lembrando que todos os cards seguem a mesma estrutura -->
         <section class="conteinerCards">
 
             <!--! card banana -->
             <div class="cardContainer cardConteiner1">
+                <!-- ? flip card é o card em si -->
                 <div class="flipCard" onclick="this.classList.toggle('flip')">
+                    <!-- ? flip card inner é onde esta contido a frente e o verso do card -->
                     <div class="flipCardInner">
+                        <!-- ? frontSide é a parte de frente do card onde só tem um texto oculto e o fundo com uma animação -->
                         <div class="frontSide">
                             <div class="conteinerConteudoFrontSide">
                                 <h2>Clique Aqui</h2>
                             </div>
                         </div>
+                        <!-- ? é o verso do card onde estão todas as informações -->
                         <div class="backSide">
                             <img src="public/icones/iconeBanana.png" alt="" class="icone iconeBanana">
                             <h2 class="titleBackSide">
