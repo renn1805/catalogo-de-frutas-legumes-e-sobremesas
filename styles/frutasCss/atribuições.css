@@ -1,3 +1,5 @@
-div.flip{
+
+/* ? faz com que a área das faces gire quando o card ganha a classe de flip */
+div.flipCard.flip div.flipCardInner {
     transform: rotateY(180deg);
 }

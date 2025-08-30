@@ -1,75 +1,171 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
 body {
     background: #faf8ef;
     padding-inline: 50px;
     padding-bottom: 35px;
 }
 
-/*?  seletor di tutulo da pagina*/
+/* ? define algumas configurações do botão de voltar */
+button.botaoVoltar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+
+    background: linear-gradient(to right, var(--color-card1), var(--color-card2), var(--color-card3));
+    border: none;
+    border-radius: 8px;
+
+    transition: all .5s ease-in-out;
+}
+
+button.botaoVoltar:hover {
+    opacity: 75%;
+}
+
+button.botaoVoltar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 1px solid tomato; */
+
+    padding: 5px 15px;
+}
+
+button.botaoVoltar img {
+    /* border: 1px solid tomato; */
+    width: 40px;
+
+    transition: all .5s ease-in-out;
+
+}
+
+button.botaoVoltar:hover img {
+    transform: scale(1.2);
+}
+
+/*?  seletor de tutulo da pagina*/
 h1.title {
-    color: rgb(68, 68, 68);
-    text-align: center;
-    margin-block: 20px 40px;
-    font-family: "Merriweather", serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
+    margin: 20px auto;
 
+    width: fit-content;
 
+    background: linear-gradient(to right, var(--color-card1), var(--color-card2), var(--color-card3));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    /* border: 1px solid tomato; */
+}
+
+/* ? define que o conteiner de cards vai ter um flex warp, um gap e o conteudo vai ser centralizado */
+section.conteinerCards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
 /*? selecionar o conteiner do card em si */
 div.cardContainer {
+    /*  adiciona um efeito 3d no card */
     perspective: 1000px;
+
     border-radius: 10px;
 }
 
 /*? peda dentro do conteiner do card a parte onde realmente é o card */
 div.cardContainer div.flipCard {
+    /* é definido como relativo para que o conteudo seja definido como absolto */
+    position: relative;
+
     width: 350px;
     height: 454px;
-    /*? é definido como relativo para que o conteudo seja definido como absolto */
-    position: relative;
+
     cursor: pointer;
 }
 
 /*? seleciona dentro do card a div em que esta as faces do card e serve para definir a área onde as faces vão ficar*/
 div.flipCard div.flipCardInner {
     position: absolute;
+
     width: 100%;
     height: 100%;
+
     transition: all 1s ease-in-out;
     transform-style: preserve-3d;
 }
 
-/* ? faz com que a área das faces gire quando o card ganha a classe de flip */
-div.flipCard.flip div.flipCardInner {
-    transform: rotateY(180deg);
-}
 
 /* ? define algumas configurações padrão para a frente e o verso */
 div.frontSide,
 div.backSide {
-    border-radius: 10px;
     position: absolute;
+
+    border-radius: 10px;
+
     backface-visibility: hidden;
 }
 
-/* ? define um fundo, e algumas outras coisas para a frente */
-div.frontSide {
+/* ? define o fundo e suas propriedades de cada card */
+div.cardConteiner1 div.frontSide {
     background: url(../../public/imgBanana.jpeg);
-    color: white;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+}
+
+div.cardConteiner2 div.frontSide {
+    background: url(../../public/imgMorango.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.cardConteiner3 div.frontSide {
+    background: url(../../public/imgAbacate.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: backgroundAnimation 6s infinite ease-in-out;
+
+}
+
+div.cardConteiner4 div.frontSide {
+    background: url(../../public/imgMaca.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.cardConteiner5 div.frontSide {
+    background: url(../../public/imgManga.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: backgroundAnimation 6s infinite ease-in-out;
+
+}
+
+
+/* ? define algumas outras coisas para a frente do card */
+div.frontSide {
+    /*propriedades de flex box */
     display: flex;
     justify-content: center;
     align-items: center;
+
+    color: white;
+
+    width: 100%;
+    height: 100%;
+
+    /* adiciona uma transição ao fundo */
     animation: backgroundAnimation 3s infinite ease-in-out;
     transition: all 1s ease-in-out;
 }
 
+/* ? coloca efeito de hover que adiciona uma sombra e um deslocamento vertival */
 div.frontSide:hover {
     transform: translateY(-10px);
     box-shadow: -18px 10px 11px 0px rgba(0, 0, 0, 0.27);
@@ -79,6 +175,7 @@ div.conteinerConteudoFrontSide {
     position: absolute;
 }
 
+/* ? define a propriedade do texto que aparece no hover */
 div.frontSide h2 {
     opacity: 0;
     transition: all .7s ease-in-out;
@@ -90,20 +187,21 @@ div.frontSide:hover h2 {
 
 /* ? define as configurações do verso */
 div.backSide {
-    background: #fff;
-    transform: rotateY(180deg);
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
+
+    background: #fff;
+    box-shadow: -18px 10px 11px 0px rgba(0, 0, 0, 0.27);
+
+    width: 100%;
+    height: 100%;
     padding: 20px;
-}
 
-/* ? faz tudo que esta no lado de tras rodar junto com o card para não ficar invertido */
-div.backSide * {
     transform: rotateY(180deg);
+
 }
 
+/* ? formata os icones do verso */
 div.backSide img.icone {
     width: 60px;
     margin-inline: auto;
@@ -114,23 +212,30 @@ div.backSide h2.titleBackSide {
 }
 
 /* ! parte da lista */
+
 div.conteinerConteudoBackside ul.listaVantagens {
-    list-style: none;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    
+    list-style: none;
 }
 
 ul.listaVantagens li.topicos {
     background: rgba(247, 183, 63, 0.872);
-    color: white;
-    font-weight: 700;
-    padding: 8px;
-    font-size: 12px;
     border-radius: 6px;
+    
+    color: #000;
+    font-weight: 700;
+    font-size: 12px;
+
+    padding: 8px;
+
+    transform: rotateY(0);
 }
 
 /* ! parte de animação */
+/* ? define uma animação para o fundo do card, apenas mudando a posição do fundo com uma transição suave */
 @keyframes backgroundAnimation {
     0% {
         background-position: left;
