@@ -1,5 +1,7 @@
+/* ? importa uma fonte que vai servir para todas as paginas */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* ? determina configurações globais para os navegadores e a fonte */
 * {
     margin: 0;
     padding: 0;
@@ -8,16 +10,17 @@
     font-style: normal;
 }
 
+/* ? cria variaveis css que serão utilizadas em todas as paginas como cores padrão */
 :root {
     --color-card1: #f7903d;
     --color-card2: #e370b7;
     --color-card3: #35cb7d;
 }
 
+/* ? determina como todos os Body vão ser, com um padding, altura e cor */
 body {
     background: #faf8ef;
     
-    padding-inline: 50px;
-    padding-bottom: 35px;
+    padding: 0 50px 35px 50px;
     min-height: 100vh;
 }

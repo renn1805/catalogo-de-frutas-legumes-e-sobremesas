@@ -1,14 +1,17 @@
 /* ? define algumas configurações do botão de voltar */
 button.botaoVoltar {
+    /* define como os elementos dentro do botao vão agir */
     display: flex;
     justify-content: center;
     align-items: center;
 
+    /* determina que o botão vai ficar fixo em uma posição x */
     position: fixed;
     top: 10px;
     left: 10px;
     z-index: 999;
 
+    /* configurações do fundo e borda do botao */
     background: transparent;
     backdrop-filter: blur(8px);
     border: 1px solid black;
@@ -17,6 +20,7 @@ button.botaoVoltar {
     transition: all .5s ease-in-out;
 }
 
+/* ? configura como o link vai ser */
 button.botaoVoltar a {
     display: flex;
     justify-content: center;
@@ -30,6 +34,7 @@ button.botaoVoltar a {
     color: #000;
 }
 
+/* ? determina o tamanho e a transição da imagem */
 button.botaoVoltar img {
     /* border: 1px solid tomato; */
     width: 30px;

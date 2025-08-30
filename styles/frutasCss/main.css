@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
-
+/* ? define um cursor personalizado de uma fruta */
 body {
     cursor: url(../../public/cursores/cursorFrutas.png), auto;
 }
@@ -176,6 +175,7 @@ ul.listaVantagens li.topicos {
 }
 
 /* ! parte de animação */
+
 /* ? define uma animação para o fundo do card, apenas mudando a posição do fundo com uma transição suave */
 @keyframes backgroundAnimation {
     0% {
