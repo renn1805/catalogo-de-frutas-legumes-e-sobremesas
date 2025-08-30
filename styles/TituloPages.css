@@ -1,0 +1,22 @@
+/*?  seletor de titulo da pagina*/
+h1.title {
+    margin: 20px auto 10px;
+
+    width: fit-content;
+
+    background: linear-gradient(to right, var(--color-card1), var(--color-card2), var(--color-card3));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    /* border: 1px solid tomato; */
+}
+
+span.descricao {
+    display: block;
+
+    width: 80%;
+    margin: 0 auto 25px;
+
+    font-weight: 300;
+    text-align: center;
+}

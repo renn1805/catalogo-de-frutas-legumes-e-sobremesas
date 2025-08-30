@@ -1,67 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
-body {
-    background: #faf8ef;
-    padding-inline: 50px;
-    padding-bottom: 35px;
-}
-
-/* ? define algumas configurações do botão de voltar */
-button.botaoVoltar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 999;
-
-    background: linear-gradient(to right, var(--color-card1), var(--color-card2), var(--color-card3));
-    border: none;
-    border-radius: 8px;
-
-    transition: all .5s ease-in-out;
-}
-
-button.botaoVoltar:hover {
-    opacity: 75%;
-}
-
-button.botaoVoltar a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    /* border: 1px solid tomato; */
-
-    padding: 5px 15px;
-}
-
-button.botaoVoltar img {
-    /* border: 1px solid tomato; */
-    width: 40px;
-
-    transition: all .5s ease-in-out;
-
-}
-
-button.botaoVoltar:hover img {
-    transform: scale(1.2);
-}
-
-/*?  seletor de tutulo da pagina*/
-h1.title {
-    margin: 20px auto;
-
-    width: fit-content;
-
-    background: linear-gradient(to right, var(--color-card1), var(--color-card2), var(--color-card3));
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-
-    /* border: 1px solid tomato; */
-}
 
 /* ? define que o conteiner de cards vai ter um flex warp, um gap e o conteudo vai ser centralizado */
 section.conteinerCards {
@@ -217,14 +155,14 @@ div.conteinerConteudoBackside ul.listaVantagens {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    
+
     list-style: none;
 }
 
 ul.listaVantagens li.topicos {
     background: rgba(247, 183, 63, 0.872);
     border-radius: 6px;
-    
+
     color: #000;
     font-weight: 700;
     font-size: 12px;

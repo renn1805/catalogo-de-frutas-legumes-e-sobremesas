@@ -1,0 +1,67 @@
+main.conteiner {
+    display: flex;
+    flex-direction: column;
+}
+
+section.conteinerCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    transition: all 1.3s ease-in-out;
+
+}
+
+section.conteinerCards div.card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background: #fff;
+    border-radius: 10px;
+    transition: all .7s ease-in-out;
+}
+
+div.card:hover {
+    box-shadow: -18px 10px 11px 0px rgba(0, 0, 0, 0.27);
+}
+
+div.conteudoCard:hover div.conteinerImg {
+    transform: translateY(-200px);
+}
+
+div.conteudoCard:hover div.conteinerTextoCard {
+    transform: translateY(-100px);
+}
+
+h2.titleCard {
+    color: #87CEEB;
+}
+
+section.conteinerCards div.conteinerImg {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 200px;
+    transition: 1s;
+    overflow: hidden;
+}
+
+img.imgCard {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .7s ease-in-out;
+}
+
+section.conteinerCards div.conteinerTextoCard {
+    margin: 30px;
+    text-align: center;
+    transition: all .7s ease-in-out;
+}
+
+div.conteinerTextoCard p.descripitionCard {
+    font-weight: 200;
+    margin-block: 20px;
+}

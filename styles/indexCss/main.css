@@ -6,19 +6,6 @@ main.conteiner {
     display: flex;
     flex-direction: column;
 }
-h1.title{
-    margin-inline: auto ;
-    background: linear-gradient(to right, var(--color-card1),var(--color-card2),var(--color-card3));
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-p.description{
-    width: 70%;
-    margin-inline: auto;
-    text-align: center;
-    margin-block: 20px 45px;
-    font-weight: 300;
-}
 section.conteinerCards {
     display: flex;
     flex-wrap: wrap;
