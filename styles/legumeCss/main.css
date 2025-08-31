@@ -1,0 +1,70 @@
+section.definicao {
+    margin-top: calc(25px + 60px + 15px);
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+p {
+    text-align: justify;
+}
+
+p.introducaoDefinicao {
+    padding-left: 15px;
+    border-left: 2px solid;
+    border-radius: 3px;
+}
+
+section.principaisLegumes {
+    margin-top: 60px;
+}
+
+section.principaisLegumes h2 {
+    width: auto;
+    margin: 0 auto 25px;
+    text-align: center;
+    /* border: 1px solid; */
+}
+
+div.conteinerCards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+div.conteinerCards div.card {
+    height: 300px;
+    width: 250px;
+    background: white;
+    border: 0 solid pink;
+    border-radius: 8px;
+    transition: all .5s ease-in-out;
+    padding: 10px;
+
+}
+
+div.conteinerCards div.card:hover {
+    transform: translateY(-10px);
+    box-shadow: -11px 10px 5px 0px rgba(0, 0, 0, 0.16);
+    border: 1px solid pink;
+}
+
+div.card h3.titleCard {
+    width: auto;
+    margin-inline: auto;
+    text-align: center;
+}
+div.card ul.beneficios{
+    list-style: none;
+    font-weight: 300;
+    font-size: .9rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+ul.beneficios li{
+    padding: 6px;
+    background: rgba(248, 197, 103, 0.518);
+    border-radius: 4px;
+}

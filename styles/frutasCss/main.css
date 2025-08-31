@@ -27,7 +27,7 @@ div.cardContainer div.flipCard {
     width: 350px;
     height: 454px;
 
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 /*? seleciona dentro do card a div em que esta as faces do card e serve para definir a área onde as faces vão ficar*/
@@ -69,7 +69,7 @@ div.cardConteiner3 div.frontSide {
     background: url(../../public/imgAbacate.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    animation: backgroundAnimation 6s infinite ease-in-out;
+    /* animation: backgroundAnimation 6s infinite ease-in-out; */
 
 }
 
@@ -83,7 +83,7 @@ div.cardConteiner5 div.frontSide {
     background: url(../../public/imgManga.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    animation: backgroundAnimation 6s infinite ease-in-out;
+    /* animation: backgroundAnimation 6s infinite ease-in-out; */
 
 }
 
@@ -101,7 +101,7 @@ div.frontSide {
     height: 100%;
 
     /* adiciona uma transição ao fundo */
-    animation: backgroundAnimation 3s infinite ease-in-out;
+    /* animation: backgroundAnimation 3s infinite ease-in-out; */
     transition: all 1s ease-in-out;
 }
 

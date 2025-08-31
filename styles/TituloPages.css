@@ -7,6 +7,7 @@ h1.title {
     background: linear-gradient(to right, var(--color-card1), var(--color-card2), var(--color-card3));
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-align: center;
 
     /* border: 1px solid tomato; */
 }

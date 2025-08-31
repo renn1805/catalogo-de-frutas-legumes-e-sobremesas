@@ -20,7 +20,7 @@
 /* ? determina como todos os Body vão ser, com um padding, altura e cor */
 body {
     background: #faf8ef;
-    
+
     padding: 0 50px 35px 50px;
     min-height: 100vh;
 }
